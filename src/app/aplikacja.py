@@ -8,10 +8,11 @@ def zarz_czlonkami():
 	print("1.Dodaj czlonka do bazy");
 	print("2.Usun czlonka z bazy");
 	print("3.Edytuj dane istniejacego czlonka");
-	print("4.Powrot do glownego menu")
+	print("4.Wypisz wszystkich czlonkow z bazy")
+	print("5.Powrot do glownego menu")
 	decyzja = int(input("Wybierz co chcesz zrobic\n"));
 
-	if decyzja == 4 :
+	if decyzja == 5 :
 		glowne_menu();
 #ZARZADZANIE STOWARZYSZENIEM
 def zarz_stowarzyszenie():
@@ -21,10 +22,12 @@ def zarz_stowarzyszenie():
 	print("3.Edytuj istniejace stowarzyszenie");
 	print("4.Dodaj czlonka do stowarzyszenia");
 	print("5.Usun czlonka z stowarzyszenia");
-	print("6.Powrot do glownego menu\n")
+	print("6.Wypisz wsystkich czlonkow wybranego stowarzyszenia");
+	print("7.Wypisz wszystkie spotkania wybranego stowarzyszenia");
+	print("8.Powrot do glownego menu\n")
 	decyzja = int(input("Wybierz co chcesz zrobic\n"));
 
-	if decyzja == 6 :
+	if decyzja == 8 :
 		glowne_menu();
 
 #ZARZADZANIE SPOTKANIEM
