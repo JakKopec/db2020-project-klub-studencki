@@ -1,4 +1,5 @@
 import sys;
+import funkcje;
 # from nazwa_pliku import * #importowanie wszystkoch funkcji z pliku 
 #--------------------------WYKORZYSTYWANE FUNKCJE-----------------------------------------#
 
@@ -8,11 +9,20 @@ def zarz_czlonkami():
 	print("1.Dodaj czlonka do bazy");
 	print("2.Usun czlonka z bazy");
 	print("3.Edytuj dane istniejacego czlonka");
-	print("4.Wypisz wszystkich czlonkow z bazy")
-	print("5.Powrot do glownego menu")
+	print("4.Wypisz wszystkich czlonkow z bazy");
+	print("5.Powrot do glownego menu");
 	decyzja = int(input("Wybierz co chcesz zrobic\n"));
 
-	if decyzja == 5 :
+	if decyzja ==1:
+		imie = raw_input("Wprowadz imie:\n");
+		nazwisko = raw_input("Wprowadz nazwisko:\n");
+		wydzial = raw_input("Wprowadz wydzial:\n");
+		email = raw_input("Wprowadz email:\n");
+		funkcje.dodawanie_do_bazy(imie,nazwisko,wydzial,email);
+		#funkcje.dodawanie_do_bazy('Adam','Malysz','EAIIB','Suhar@mail.com');
+	elif decyzja == 4:
+		funkcje.wypisywanie_z_bazy("Yep");
+	elif decyzja == 5 :
 		glowne_menu();
 #ZARZADZANIE STOWARZYSZENIEM
 def zarz_stowarzyszenie():
@@ -64,4 +74,6 @@ def glowne_menu():
 		glowne_menu();			
 
 #--------------------GLOWNA CZESC PROGRAMU-----------------------------------
+#funkcje.wypisywanie_z_bazy();
 glowne_menu();
+
