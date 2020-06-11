@@ -1,5 +1,5 @@
 # Temat projektu
-Tematem Projektu jest aplikacja wykorzystywana przez administratora do zarządzania stowarzyszeniami (w tym wypadku klubami studenckimi). 
+Tematem Projektu jest aplikacja wykorzystywana przez administratora do zarządzania klubami studenckimi (w tym wypadku klubami studenckimi). 
 
 | Nazwisko i imię | Wydział | Kierunek | Semestr | Grupa | Rok akademicki |
 | :-------------: | :-----: | :------: | :-----: | :---: | :------------: |
