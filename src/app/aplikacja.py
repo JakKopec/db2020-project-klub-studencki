@@ -1,5 +1,10 @@
 import sys;
 import funkcje;
+import sys;
+import smtplib;
+from smtplib import SMTP;
+
+global server;
 # from nazwa_pliku import * #importowanie wszystkoch funkcji z pliku 
 #--------------------------WYKORZYSTYWANE FUNKCJE-----------------------------------------#
 
@@ -20,6 +25,9 @@ def zarz_czlonkami():
 		email = raw_input("Wprowadz email:\n");
 		funkcje.dodawanie_do_bazy(imie,nazwisko,wydzial,email);
 		#funkcje.dodawanie_do_bazy('Adam','Malysz','EAIIB','Suhar@mail.com');
+	elif decyzja ==2:
+		czlonek_id = raw_input("Podaj id czlonka ktorego chcesz usunac\n");
+		funkcje.usuwanie_czlonka(czlonek_id);
 	elif decyzja == 4:
 		funkcje.wypisywanie_z_bazy("Yep");
 	elif decyzja == 5 :
@@ -39,6 +47,7 @@ def zarz_stowarzyszenie():
 
 	if decyzja == 8 :
 		glowne_menu();
+
 
 #ZARZADZANIE SPOTKANIEM
 def zarz_spotkanie():
@@ -69,9 +78,31 @@ def glowne_menu():
 		zarz_spotkanie();
 	elif decyzja == 4:
 		sys.exit();
+	elif decyzja == 5:
+		mail();
 	else:
 		print("Podaj poprawna opcje\n");
 		glowne_menu();			
+
+"""
+def mail():
+	print("\n\nMAIL\n\n");
+	#fromaddr = "BD2020JkBk@gmail.com"
+	#toaddr = "Lasiuk883@gmail.com"
+    #msg['from']= fromaddr
+    #msg['to']=toadrr
+    #msg['subject']= "Python email"
+
+
+    #from email.MIMEMultipart import MIMEMultipart;
+    #from email.MIMEText import MIMEText;
+    server = smtplib.SMTP('smtp.gmail.com',587)
+	server.ehlo();
+	server.starttls();
+	server.ehlo();
+	server.login("BD2020JkBk@gmail.com","gXPID9HNwdhgnX6t");
+"""
+
 
 #--------------------GLOWNA CZESC PROGRAMU-----------------------------------
 #funkcje.wypisywanie_z_bazy();
